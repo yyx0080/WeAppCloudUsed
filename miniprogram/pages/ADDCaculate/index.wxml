@@ -1,0 +1,7 @@
+<!--pages/ADDCaculate.wxml-->
+<view>
+  <input bindinput="inputNum1" placeholder="输入第一个数字" />
+  <input bindinput="inputNum2" placeholder="输入第二个数字" />
+  <button bindtap="calculateSum">计算和</button>
+  <text>结果：{{result}}</text>
+</view>

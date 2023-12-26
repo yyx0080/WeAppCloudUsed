@@ -1,0 +1,1 @@
+"C:\Program Files (x86)\Tencent\微信web开发者工具\cli.bat" cloud functions deploy --e cloud1-0gykzx91590ae8d5 --n quickstartFunctions --r --project "C:\WechatOne\CloudSave" --report_first --report

@@ -20,7 +20,10 @@ Page({
       showItem: false,
       item: [{
         title: '上传文件',
-        page: 'uploadFile'
+        page: 'uploadFile',
+      },{
+        title:'下载文件',
+        page:'downloadCloudImage'
       }]
     }],
     envList,

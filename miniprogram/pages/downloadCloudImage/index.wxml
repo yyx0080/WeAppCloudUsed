@@ -1,2 +1,6 @@
-<!--pages/downloadCloudImage/index.wxml-->
-<text>pages/downloadCloudImage/index.wxml</text>
+<view class="container">
+  <view wx:for="{{imageList}}" wx:for-item="item" wx:key="FileID" class="image-item">
+    <image src="{{item.tempFileURL}}" mode="aspectFill" bindtap="previewImage" data-url="{{item.tempFileURL}}"></image>
+    <view class="download-btn" bindtap="downloadImage" data-fileid="{{item.tempFileURL}}">下载</view>
+  </view>
+</view>

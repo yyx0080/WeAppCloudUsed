@@ -3,6 +3,7 @@ Page({
   /**
    * 页面的初始数据
    */
+  
   data: {
     showUploadTip: false,
     haveGetImgSrc: false,
@@ -17,6 +18,7 @@ Page({
   },
 
   uploadImg() {
+    const db = wx.cloud.database();
     wx.showLoading({
       title: '上传中，别急....',
     });
@@ -48,6 +50,22 @@ Page({
           }
         }).then(res => {
           console.log('上传成功', res);
+          console.log('fileid = ',res.fileID);
+          //这里需要将图片的id上传到数据库。
+          db.collection('images').add({
+            data: {
+              fileID: res.fileID, // 上传图片返回的 fileID
+              //userId: 'userOpenID', // 用户的标识，可以是用户的 OpenID
+              uploadTime: new Date(), // 上传时间
+              // 其他字段...
+            },
+            success: res => {
+              console.log('上传成功', res);
+            },
+            fail: err => {
+              console.error('上传失败', err);
+            }
+          });
           this.setData({
             haveGetImgSrc: true,
             imgSrc: res.fileID

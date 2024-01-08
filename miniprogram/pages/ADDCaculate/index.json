@@ -1,3 +1,5 @@
 {
-  "navigationBarTitleText": "云计算器"
+  "navigationBarTitleText": "云计算器?",
+  "navigationBarTextStyle": "white",
+  "navigationBarBackgroundColor": "#000000"
 }

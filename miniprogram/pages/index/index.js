@@ -34,6 +34,15 @@ Page({
         page: 'newfuntion'
       },
     ]
+    },{
+      title: 'lhj新加的',
+      tip:'456',
+      showItem: false,
+      item: [{
+        title: '新的page',
+        page: 'lhjfuction'
+      },
+    ]
     }],
     envList,
     selectedEnv: envList[0],

@@ -25,6 +25,15 @@ Page({
         title:'下载文件',
         page:'downloadCloudImage'
       }]
+    },{
+      title: 'yyx新加的',
+      tip:'123',
+      showItem: false,
+      item: [{
+        title: '新的page',
+        page: 'newfuntion'
+      },
+    ]
     }],
     envList,
     selectedEnv: envList[0],

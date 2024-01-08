@@ -1,0 +1,23 @@
+<!--pages/newfuntion/index.wxml-->
+<!-- pages/index/index.wxml -->
+<!-- pages/index/index.wxml -->
+<!-- pages/index/index.wxml -->
+<!-- pages/index/index.wxml -->
+<view>
+  <view class="table-header">
+    <text class="header-cell">文件ID</text>
+    <text class="header-cell">上传时间</text>
+    <text class="header-cell">数据库ID</text>
+    <text class="header-cell">用户ID</text>
+  </view>
+  
+  <block wx:for="{{ databaseData }}" wx:key="index">
+    <view class="table-row">
+      <text class="table-cell">{{ item.fileID }}</text>
+      <text class="table-cell">{{ item.uploadTime }}</text>
+      <text class="table-cell">{{ item._id }}</text>
+      <text class="table-cell">{{ item._openid }}</text>
+    </view>
+  </block>
+</view>
+
